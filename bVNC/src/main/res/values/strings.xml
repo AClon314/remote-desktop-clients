@@ -909,4 +909,5 @@ Below that is where you configure your connection.
     <string name="enable_gateway">Enable Gateway</string>
     <string name="scroll_speed">Touch Scroll Speed</string>
     <string name="desktop_scale_percentage">Custom Scaling Percentage</string>
+    <string name="keyboard_accessibility_service_description">These permissions are only used to detect when buttons are pressed so they can be sent to PC without triggering default action on your device.</string>
 </resources>

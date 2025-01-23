@@ -159,6 +159,8 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     public RemoteClientsInputListener inputListener;
     private ImageButton keyboardIconForAndroidTv;
     float keyboardIconForAndroidTvX = Float.MAX_VALUE;
+
+    public static boolean hasForegroundInstance = false;
     IgnoringMouseInputListener ignoringMouseInputListener = new IgnoringMouseInputListener();
 
     OnTouchViewMover toolbarMover;
@@ -716,6 +718,7 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     protected void onPause() {
         super.onPause();
         Log.i(TAG, "onPause called.");
+        hasForegroundInstance = false;
         try {
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(canvas.getWindowToken(), 0);
@@ -728,6 +731,7 @@ public class RemoteCanvasActivity extends AppCompatActivity implements
     protected void onResume() {
         super.onResume();
         Log.i(TAG, "onResume called.");
+        hasForegroundInstance = true;
         try {
             canvas.postInvalidateDelayed(600);
         } catch (NullPointerException e) {

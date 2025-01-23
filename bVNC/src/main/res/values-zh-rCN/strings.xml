@@ -856,4 +856,5 @@ aSPICE对应的功能如下：
     <string name="prefer_sending_unicode">Unicode输入(仅限Windows)</string>
     <string name="hide_connection_thumbnails">隐藏缩略图</string>
     <string name="show_only_connection_nicknames">只显示昵称</string>
+    <string name="keyboard_accessibility_service_description">这些权限仅用于检测按钮何时被按下，以便将它们发送到电脑，而不会触发设备上的默认操作。</string>
 </resources>
